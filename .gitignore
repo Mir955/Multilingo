@@ -1,0 +1,12 @@
+# ignore all logs
+*.log
+
+# ignore idea
+*.idea
+
+# ignore pycache
+__pycache__
+
+# ignore jupyter notebook checkpoints
+.ipynb_checkpoints
+

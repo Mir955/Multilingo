@@ -1,8 +1,11 @@
 from flask import Flask
 import logging
 from app.get_translations import sentence_route
+import os
 
 # for logging errors and info
+if not os.path.isdir("app/logs"):
+    os.makedirs("app/logs")
 logging.basicConfig(filename='app/logs/record.log', format='%(asctime)s : %(levelname)s : %(message)s',
                     level=logging.INFO)
 

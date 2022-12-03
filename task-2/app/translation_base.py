@@ -8,7 +8,7 @@ def get_ten_translation():
     :return:http_status_code, message, data(sentence-pair)
     """
     try:
-        df = pd.read_excel("app/data/translation-data.xlsx")
+        df = pd.read_excel("app/data/cleaned-translation-data.xlsx")
         parallel_sentence = df.sample(10).to_dict('records')
         return HTTPStatus.OK, "Data read successfully!", parallel_sentence
     except (FileNotFoundError, IOError):
